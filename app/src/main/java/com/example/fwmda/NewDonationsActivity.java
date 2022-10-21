@@ -33,7 +33,7 @@ import java.util.List;
 public class NewDonationsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-
+ //example
     RecyclerView recyclerView;
     private DonationAdapter donationAdapter;
     private List<Donations> donationList;
