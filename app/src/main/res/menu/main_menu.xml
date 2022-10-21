@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_myfeed"
+        android:title="Home"/>
+    <item
+        android:id="@+id/sentEmail"
+        android:icon="@drawable/ic_check"
+        android:title="Donors Emailed"/>
+    <item
+        android:id="@+id/compatible"
+        android:icon="@drawable/compatible"
+        android:visible="false"
+        android:title="Compatible With Me "/>
+
+    <item android:title="Donations">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/addDonation"
+                    android:icon="@drawable/add_donation"
+                    android:visible="false"
+                    android:title="Add Donation"/>
+                <item
+                    android:id="@+id/myDonations"
+                    android:icon="@drawable/applogo"
+                    android:visible="false"
+                    android:title="My Donations"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Donations">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/newDonations"
+                    android:icon="@drawable/ic_new"
+                    android:visible="false"
+                    android:title="New Donations"/>
+                <item
+                    android:id="@+id/receivedDonations"
+                    android:icon="@drawable/applogo"
+                    android:visible="false"
+                    android:title="Received Donations"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Donor Group">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/individual"
+                    android:icon="@drawable/individual"
+                    android:title="Individual"/>
+                <item
+                    android:id="@+id/restaurant"
+                    android:icon="@drawable/restaurant"
+                    android:title="Restaurant"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Actions">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/profile"
+                    android:icon="@drawable/ic_person"
+                    android:title="Profile"/>
+                <item
+                    android:id="@+id/notifications"
+                    android:icon="@drawable/ic_notifications"
+                    android:title="Notifications"/>
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Log Out"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/about"
+                    android:icon="@drawable/ic_about"
+                    android:title="About"/>
+                <item
+                    android:id="@+id/share"
+                    android:icon="@drawable/ic_share"
+                    android:title="Share"/>
+
+            </group>
+        </menu>
+    </item>
+
+
+
+</menu>

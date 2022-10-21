@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FWMDA</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string-array name="donorGroups">
+        <item>Select your donor category</item>
+        <item>Individual</item>
+        <item>Restaurant</item>
+    </string-array>
+</resources>

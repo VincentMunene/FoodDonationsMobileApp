@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "581311284285",
+    "project_id": "food-donation-d3d60",
+    "storage_bucket": "food-donation-d3d60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581311284285:android:c78fed72cd6be79e985654",
+        "android_client_info": {
+          "package_name": "com.example.fwmda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581311284285-4jss2s08frt72buh1vo50sqa06gjj4qg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fwmda",
+            "certificate_hash": "340bf435259dcd9c705ed8d787d23033917b763e"
+          }
+        },
+        {
+          "client_id": "581311284285-8sveg0glbrta7ln00aqopekbic6ni314.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAhszt8yHgYHer2oLG-vpeiD_P-AjqM1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581311284285-8sveg0glbrta7ln00aqopekbic6ni314.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

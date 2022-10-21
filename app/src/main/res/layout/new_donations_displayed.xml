@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/donationFoodImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/image_donate"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/foodItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:textAlignment="textStart"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/foodItemDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:textAlignment="textStart"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/foodItemNameDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:textAlignment="textStart"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/foodItemTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:textAlignment="textStart"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/foodItemNameLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:textAlignment="textStart"
+                android:textColor="#000" />
+
+            <Button
+                android:id="@+id/approveDonation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_background"
+                android:text="Approve"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="8sp"
+                app:backgroundTint="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/mainLayout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+</RelativeLayout>
