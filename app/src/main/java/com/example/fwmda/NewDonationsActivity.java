@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -33,10 +34,13 @@ import java.util.List;
 public class NewDonationsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
- //example
+
     RecyclerView recyclerView;
     private DonationAdapter donationAdapter;
     private List<Donations> donationList;
+
+    ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +102,7 @@ public class NewDonationsActivity extends AppCompatActivity {
 
 
     }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

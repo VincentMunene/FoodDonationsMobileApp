@@ -1,5 +1,6 @@
 package com.example.fwmda.Model;
 
+import android.app.ProgressDialog;
 import android.widget.Button;
 
 public class Donations {
@@ -16,6 +17,8 @@ public class Donations {
         this.pickUpLocation = pickUpLocation;
         this.foodurl=foodurl;
     }
+    ProgressDialog progressDialog;
+
     public void setFoodItemName(String foodItemName) {
         this.foodItemName = foodItemName;
     }
@@ -64,3 +67,5 @@ public class Donations {
         return foodurl;
     }
 }
+
+

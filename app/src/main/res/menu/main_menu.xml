@@ -9,7 +9,7 @@
     <item
         android:id="@+id/sentEmail"
         android:icon="@drawable/ic_check"
-        android:title="Donors Emailed"/>
+        android:title="Messages"/>
     <item
         android:id="@+id/compatible"
         android:icon="@drawable/compatible"

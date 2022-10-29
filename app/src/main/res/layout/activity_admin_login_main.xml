@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Login"
+                android:text="Admin Login"
                 android:textColor="#000"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -69,7 +69,7 @@
                     app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/loginEmail"
+                        android:id="@+id/adminLoginEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_mail"
@@ -91,7 +91,7 @@
                     app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/loginPassword"
+                        android:id="@+id/adminLoginPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_password"
@@ -105,7 +105,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
-                    android:id="@+id/forgotPassword"
+                    android:id="@+id/adminForgotPassword"
                     android:text="Forgot password?"
                     android:textColor="#000"
                     android:gravity="end"
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"/>
 
                 <Button
-                    android:id="@+id/loginButton"
+                    android:id="@+id/adminLoginButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -127,25 +127,7 @@
                     android:textColor="#fff"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/backButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:text="Don't have an account? Sign Up"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/adminLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:text="Admin login"
-                    android:textColor="#000"
-                    android:textStyle="bold" />
 
             </LinearLayout>
         </LinearLayout>

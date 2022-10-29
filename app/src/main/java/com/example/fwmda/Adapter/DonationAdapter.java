@@ -1,6 +1,7 @@
 package com.example.fwmda.Adapter;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
@@ -16,16 +17,26 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.fwmda.Model.Donations;
 import com.example.fwmda.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
 public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHolder> {
     private Context context;
     private List<Donations> donationList;
+
+
     public DonationAdapter(Context context, List<Donations> donationList) {
         this.context = context;
         this.donationList = donationList;
+
     }
+    ProgressDialog progressDialog;
 
 
     @NonNull
@@ -35,6 +46,7 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
                 R.layout.new_donations_displayed,parent,false);
         return new ViewHolder(v);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -52,25 +64,51 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
         holder.approveDonation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 new AlertDialog.Builder(context)
                         .setTitle("APPROVE DONATION")
-                        .setMessage("Approve current donation?")
+                        .setMessage("Approve this donation?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                progressDialog = new ProgressDialog(context);
+                                progressDialog.setMessage("Please Wait Donation is updating...");
+                                progressDialog.setTitle("Approving Donation");
+                                progressDialog.show();
+                                DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
+                                        .child("Donations").child(FirebaseAuth.getInstance().getCurrentUser()
+                                                .getUid());
+                                reference.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        donationList.clear();
+                                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                            Donations donations = dataSnapshot.getValue(Donations.class);
+                                            assert donations != null;
+                                            donationList.remove(donations);
+
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
 
                             }
-                        });
-
+                        })
+                .setNegativeButton("No", null)
+                        .show();
 
             }
         });
 
 
 
+
     }
+
 
     @Override
     public int getItemCount() {
@@ -98,4 +136,6 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
 
         }
     }
+
 }
+

@@ -70,20 +70,22 @@
                 android:layout_margin="2dp"
                 android:textAlignment="textStart"
                 android:textColor="#000" />
+
+            <Button
+                android:id="@+id/emailNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_background"
+                android:text="Message"
+                android:textSize="8sp"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/emailNow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="5dp"
-            android:background="@drawable/button_background"
-            android:text="Email"
-            android:textSize="8sp"
-            android:textAllCaps="false"
-            android:visibility="gone"
-            app:backgroundTint="@color/colorPrimary" />
+
 
     </LinearLayout>
 

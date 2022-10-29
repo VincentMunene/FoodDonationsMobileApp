@@ -42,6 +42,7 @@ public class SelectRegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SelectRegistrationActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity
                     Menu nav_menu = nav_view.getMenu();
 
                     if (type.equals("donor")){
-                        nav_menu.findItem(R.id.sentEmail).setTitle("Received Emails");
+                        nav_menu.findItem(R.id.sentEmail).setTitle("Messages");
                         nav_menu.findItem(R.id.addDonation).setVisible(true);
                         nav_menu.findItem(R.id.myDonations).setVisible(true);
                     }

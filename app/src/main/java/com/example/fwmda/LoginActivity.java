@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextInputEditText loginEmail;
     private TextInputEditText loginPassword;
-    private TextView forgotPassword;
+    private TextView forgotPassword, adminLogin;
     private Button loginButton;
 
     private ProgressDialog loader;
@@ -59,6 +59,8 @@ public class LoginActivity extends AppCompatActivity {
         loginPassword = findViewById(R.id.loginPassword);
         forgotPassword = findViewById(R.id.forgotPassword);
         loginButton = findViewById(R.id.loginButton);
+        adminLogin = findViewById(R.id.adminLogin);
+
 
         loader = new ProgressDialog(this);
 
@@ -77,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final String email = loginEmail.getText().toString().trim();
                 final String password = loginPassword.getText().toString().trim();
+
 
                 if(TextUtils.isEmpty(email)){
                     loginEmail.setError("Email is required!");
@@ -104,6 +107,14 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
                 }
+            }
+        });
+
+        adminLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, AdminLoginActivity.class);
+                startActivity(intent);
             }
         });
 
