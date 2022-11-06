@@ -100,8 +100,12 @@ public class MainActivity extends AppCompatActivity
                 String type = snapshot.child("type").getValue().toString();
                 if (type.equals("donor")){
                     readOrganizations();
-                }else{
+                }if (type.equals("organization")){
                     readDonors();
+                }
+                else {
+                    readDonors();
+                    readOrganizations();
                 }
             }
 
@@ -155,10 +159,12 @@ public class MainActivity extends AppCompatActivity
                         nav_menu.findItem(R.id.addDonation).setVisible(true);
                         nav_menu.findItem(R.id.myDonations).setVisible(true);
                     }
-                    else {
+                    if (type.equals("organization")){
                         nav_menu.findItem(R.id.newDonations).setVisible(true);
                         nav_menu.findItem(R.id.receivedDonations).setVisible(true);
-
+                    }
+                    else {
+                        nav_menu.findItem(R.id.receivedDonations).setVisible(true);
                     }
 
                 }
